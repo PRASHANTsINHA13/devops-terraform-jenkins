@@ -61,7 +61,7 @@ pipeline {
                 }
             }
         }
-
+/*
         stage('Terraform Destroy') {
             steps {
                 script {
@@ -74,7 +74,7 @@ pipeline {
                         }
                     }
                 }
-            }
+            } */
         }
     }
 }
