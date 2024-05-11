@@ -7,9 +7,9 @@ output "sg_ec2_sg_ssh_http_id" {
   value = aws_security_group.ec2_sg_ssh_http.id
 }
 
-output "rds_mysql_sg_id" {
+/*output "rds_mysql_sg_id" {
   value = aws_security_group.rds_mysql_sg.id
-}
+}*/
 
 output "sg_ec2_for_python_api" {
   value = aws_security_group.ec2_sg_python_api.id
@@ -60,7 +60,7 @@ resource "aws_security_group" "ec2_sg_ssh_http" {
     Name = "Security Groups to allow SSH(22) and HTTP(80)"
   }
 }
-
+/*
 # Security Group for RDS
 resource "aws_security_group" "rds_mysql_sg" {
   name        = "rds-sg"
@@ -74,7 +74,7 @@ resource "aws_security_group" "rds_mysql_sg" {
     cidr_blocks = var.public_subnet_cidr_block # replace with your EC2 instance security group CIDR block
   }
 }
-
+*/
 resource "aws_security_group" "ec2_sg_python_api" {
   name        = var.ec2_sg_name_for_python_api
   description = "Enable the Port 5000 for python api"
